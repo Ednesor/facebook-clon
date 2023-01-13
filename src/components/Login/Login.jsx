@@ -13,12 +13,8 @@ export default function Login() {
     return (
         <Container>
             <Sesion />
-            <div className="loginForm">
-
-            </div>
-            <div className="footer">
-
-            </div>
+            <LoginForm />
+            <Footer />
         </Container>
     )
 }
