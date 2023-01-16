@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BiPlus } from "react-icons/bi"
 
 const Container = styled("div")({
     backgroundColor: "white",
@@ -14,13 +15,13 @@ const Languajes = styled("div")({
     width: "71.5%",
     display: "flex",
     justifyContent: "left",
-    alignItems: "end",
+    alignItems: "center",
     flexWrap: "wrap",
     marginTop: "25px",
     marginBottom: "3px",
 })
 const LangItem = styled("span")({
-    color: "#717172",
+    color: "#888989",
     fontSize: "12px",
     marginRight: "10px",
     fontWeight: "500",
@@ -30,8 +31,17 @@ const LangItem = styled("span")({
         textDecoration: "underline"
     }
 })
-const PlusIcon = styled("span")({
-
+const PlusIcon = styled(BiPlus)({
+    border: "1px solid #C9C7C9",
+    borderRadius: "2px",
+    backgroundColor: "#F6F5F6",
+    color: "#656C7B",
+    width: "30px",
+    height: "19px",
+    cursor: "pointer",
+    "&:hover": {
+        backgroundColor: "#EBEDF0"
+    }
 })
 const Line = styled("hr")({
     width: "71.5%",
@@ -40,14 +50,19 @@ const Line = styled("hr")({
     borderTop: "1px solid #C9C7C9"
 })
 const Options = styled("div")({
-
+    width: "71.5%",
+    display: "flex",
+    justifyContent: "left",
+    alignItems: "end",
+    flexWrap: "wrap",
 })
-const OpItem = styled("span")({
-
+const OpItem = styled(LangItem)({
+    marginRight: "20px",
+    marginBottom: "5px",
 })
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <Container>
             <Languajes>
                 <LangItem>Español</LangItem>
@@ -60,7 +75,7 @@ export default function Footer(){
                 <LangItem>中文(简体)</LangItem>
                 <LangItem>हिन्दी</LangItem>
                 <LangItem>日本語</LangItem>
-                <PlusIcon>+</PlusIcon>
+                <PlusIcon size={15}>+</PlusIcon>
             </Languajes>
             <Line />
             <Options>
