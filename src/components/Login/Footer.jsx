@@ -16,16 +16,19 @@ const Languajes = styled("div")({
     justifyContent: "left",
     alignItems: "end",
     flexWrap: "wrap",
-    height: "auto",
-    // border: "1px solid black",
-    marginTop: "20px"
+    marginTop: "25px",
+    marginBottom: "3px",
 })
 const LangItem = styled("span")({
     color: "#717172",
     fontSize: "12px",
     marginRight: "10px",
     fontWeight: "500",
-    fontFamily: "Helvetica, Arial, sans-serif"
+    fontFamily: "Helvetica, Arial, sans-serif",
+    cursor: "pointer",
+    "&:hover": {
+        textDecoration: "underline"
+    }
 })
 const PlusIcon = styled("span")({
 
