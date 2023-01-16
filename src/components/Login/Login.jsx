@@ -9,6 +9,7 @@ const Container = styled("div")({
     flexWrap: "wrap",
     justifyContent: "center",
     paddingTop: "8px",
+    height: "90vh",
 })
 
 export default function Login() {
