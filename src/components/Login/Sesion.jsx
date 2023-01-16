@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import { BsFillPlusCircleFill } from "react-icons/bs"
 
 const Logo = styled("img")({
     width: "200px",
@@ -22,9 +23,13 @@ const  AddAccount = styled("div")({
     borderRadius: "10px",
     width: "160px",
     boxShadow: "0px 0px 20px #F5F6F7",
-    transition: "all .25s",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    transition: "all .5s",
+    cursor: "pointer",
     "&:hover":{
-        boxShadow: "0px 0px 20px #CBCCCC"
+        boxShadow: "0px 0px 10px #CBCCCC"
     }
 })
 const Name = styled("p")({
@@ -33,10 +38,22 @@ const Name = styled("p")({
     width: "100%",
     textAlign: "center",
     top: "0px",
+    backgroundColor: "white",
+    height: "38px",
+    borderRadius: "0px 0px 10px 10px",
+    paddingTop: "9px",
 })
-const Add = styled("div")({
+const Add = styled(BsFillPlusCircleFill)({
+    color: "#1976F2",
+    height: "123px",
+    backgroundColor: "#F5F6F7",
+    borderRadius: "10px",
+    marginTop: "16px",
+})
+const Accounts = styled("div")({
 
 })
+
 
 export default function Sesion(){
     return(
@@ -46,12 +63,12 @@ export default function Sesion(){
                     <Title>Inicios de sesión recientes</Title>
                     <SubTitle>Haz clic en tu foto o agrega una cuenta</SubTitle>
                 </div>
-                <div>
+                <Accounts>
                     <AddAccount>
-                        <Add>Boton</Add>
+                        <Add size={42} />
                         <Name>Agregar cuenta</Name>
                     </AddAccount>
-                </div>
+                </Accounts>
         </div>
     )
 }
