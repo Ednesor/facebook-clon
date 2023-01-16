@@ -14,10 +14,12 @@ const Container = styled("div")({
 
 export default function Login() {
     return (
-        <Container>
-            <Sesion />
-            <LoginForm />
-            <Footer />
-        </Container>
+        <div>
+            <Container>
+                <Sesion />
+                <LoginForm />
+            </Container>
+                <Footer />
+        </div>
     )
 }
