@@ -8,7 +8,6 @@ const Container = styled("div")({
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    // height: "200px",
     translate: "0% 65%"
 })
 const Languajes = styled("div")({
@@ -59,6 +58,12 @@ const Options = styled("div")({
 const OpItem = styled(LangItem)({
     marginRight: "20px",
     marginBottom: "5px",
+    fontSize: "11.5px",
+})
+const Meta = styled("p")({
+    width: "70.7%",
+    fontSize: "11px",
+    color: "#6F7474"
 })
 
 export default function Footer() {
@@ -109,6 +114,8 @@ export default function Footer() {
                 <OpItem>Ayuda</OpItem>
                 <OpItem>Subir contactos y no usuarios</OpItem>
             </Options>
+            <Meta><b>Ednesor</b> © 2023</Meta>
         </Container>
     )
 }
+//TODO: sustituir % por px
