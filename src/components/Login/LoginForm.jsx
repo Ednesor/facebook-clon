@@ -29,7 +29,8 @@ const Field = styled("input")({
     "&:focus": {
         outline: "none",
         borderColor: "#166FE5",
-        boxShadow: "0px 0px 3px #AED5FF"
+        boxShadow: "0px 0px 3px #AED5FF",
+        backgroundColor: "#E8F0FE",
     }
 })
 const LoginButton = styled("button")({
@@ -95,7 +96,7 @@ export default function LoginForm() {
         <Container>
             <Form>
                 <Field type="text" name="email" id="email" placeholder="Correo electrónico o número de teléfono" />
-                <Field type="text" name="email" id="email" placeholder="Contraseña" />
+                <Field type="password" name="password" id="password" placeholder="Contraseña" />
                 <LoginButton>Iniciar sesión</LoginButton>
                 <Hint>¿Olvidaste tu contraseña?</Hint>
                 <Line />

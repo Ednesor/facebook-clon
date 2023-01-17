@@ -16,6 +16,7 @@ const SubContainer = styled("div")({
     justifyContent: "space-between",
     paddingTop: "8px",
     width: "70%",
+    maxWidth: "1000px",
     flexWrap: "wrap",
     marginLeft: "-20px",
     height: "650px",
