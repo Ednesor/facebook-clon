@@ -8,14 +8,16 @@ const Logo = styled("img")({
     marginLeft: "-20px"
 })
 const Title = styled("p")({
-    fontSize: "25px",
-    marginBottom: "-14px"
+    fontSize: "30px",
+    marginBottom: "-14px",
+    fontWeight: 100,
+    color: "#201D1C"
 })
 
 const SubTitle = styled("p")({
     color: "#5F5F5F"
 })
-const  AddAccount = styled("div")({
+const AddAccount = styled("div")({
     marginTop: "26px",
     backgroundColor: "#F5F6F7",
     height: "206px",
@@ -28,7 +30,7 @@ const  AddAccount = styled("div")({
     flexWrap: "wrap",
     transition: "all .5s",
     cursor: "pointer",
-    "&:hover":{
+    "&:hover": {
         boxShadow: "0px 0px 10px #CBCCCC"
     }
 })
@@ -56,20 +58,20 @@ const Accounts = styled("div")({
 })
 
 
-export default function Sesion(){
-    return(
+export default function Sesion() {
+    return (
         <div>
             <div>
-                    <Logo src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook" />
-                    <Title>Inicios de sesión recientes</Title>
-                    <SubTitle>Haz clic en tu foto o agrega una cuenta</SubTitle>
-                </div>
-                <Accounts>
-                    <AddAccount>
-                        <Add size={42} />
-                        <Name>Agregar cuenta</Name>
-                    </AddAccount>
-                </Accounts>
+                <Logo src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook" />
+                <Title>Inicios de sesión recientes</Title>
+                <SubTitle>Haz clic en tu foto o agrega una cuenta</SubTitle>
+            </div>
+            <Accounts>
+                <AddAccount>
+                    <Add size={42} />
+                    <Name>Agregar cuenta</Name>
+                </AddAccount>
+            </Accounts>
         </div>
     )
 }

@@ -2,24 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
 import LoginForm from "./LoginForm";
-import Sesion from "./Sesion"
+import Sesion from "./Sesion";
 
 const Container = styled("div")({
+    width: "100%",
     display: "flex",
-    flexWrap: "wrap",
     justifyContent: "center",
+    flexWrap: "wrap",
+    marginTop: "80px",
+});
+const SubContainer = styled("div")({
+    display: "flex",
+    justifyContent: "space-between",
     paddingTop: "8px",
-    height: "90vh",
-})
+    width: "70%",
+    flexWrap: "wrap",
+    marginLeft: "-20px",
+    height: "650px",
+});
 
 export default function Login() {
     return (
-        <div>
-            <Container>
+        <Container>
+            <SubContainer>
                 <Sesion />
                 <LoginForm />
-            </Container>
+            </SubContainer>
                 <Footer />
-        </div>
+        </Container>
     )
-}
+};
