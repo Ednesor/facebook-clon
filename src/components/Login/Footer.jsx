@@ -8,10 +8,18 @@ const Container = styled("div")({
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    translate: "0% 65%"
+})
+const SubContainer = styled("div")({
+    backgroundColor: "white",
+    width: "100%",
+    maxWidth: "1370px",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
 })
 const Languajes = styled("div")({
     width: "71.5%",
+    maxWidth: "980px",
     display: "flex",
     justifyContent: "left",
     alignItems: "center",
@@ -62,59 +70,65 @@ const OpItem = styled(LangItem)({
 })
 const Meta = styled("p")({
     width: "70.7%",
+    maxWidth: "",
     fontSize: "11px",
-    color: "#6F7474"
+    color: "#6F7474",
+    marginBottom: "20px",
+    marginLeft: "-10px",
+    marginTop: "20px",
 })
 
 export default function Footer() {
     return (
         <Container>
-            <Languajes>
-                <LangItem>Español</LangItem>
-                <LangItem>English (US)</LangItem>
-                <LangItem>Português (Brasil)</LangItem>
-                <LangItem>Français (France)</LangItem>
-                <LangItem>Italiano</LangItem>
-                <LangItem>Deutsch</LangItem>
-                <LangItem>العربية</LangItem>
-                <LangItem>中文(简体)</LangItem>
-                <LangItem>हिन्दी</LangItem>
-                <LangItem>日本語</LangItem>
-                <PlusIcon size={15}>+</PlusIcon>
-            </Languajes>
-            <Line />
-            <Options>
-                <OpItem>Registrarte</OpItem>
-                <OpItem>Iniciar sesión</OpItem>
-                <OpItem> Messenger</OpItem>
-                <OpItem>Facebook Lite</OpItem>
-                <OpItem>Watch</OpItem>
-                <OpItem>Lugares</OpItem>
-                <OpItem>Juegos</OpItem>
-                <OpItem>Marketplace</OpItem>
-                <OpItem>Meta Pay</OpItem>
-                <OpItem>Oculus</OpItem>
-                <OpItem>Portal</OpItem>
-                <OpItem>Instagram</OpItem>
-                <OpItem>Bulletin</OpItem>
-                <OpItem>Recaudación de fondos</OpItem>
-                <OpItem>Servicios</OpItem>
-                <OpItem>Centro de información de votación</OpItem>
-                <OpItem>Política de privacidad</OpItem>
-                <OpItem>Centro de privacidad</OpItem>
-                <OpItem>Grupos</OpItem>
-                <OpItem>Información</OpItem>
-                <OpItem>Crear anuncio</OpItem>
-                <OpItem>Crear página</OpItem>
-                <OpItem>Desarrolladores</OpItem>
-                <OpItem>Empleo</OpItem>
-                <OpItem>Cookies</OpItem>
-                <OpItem>Opciones de anuncios</OpItem>
-                <OpItem>Condiciones</OpItem>
-                <OpItem>Ayuda</OpItem>
-                <OpItem>Subir contactos y no usuarios</OpItem>
-            </Options>
-            <Meta><b>Ednesor</b> © 2023</Meta>
+            <SubContainer>
+                <Languajes>
+                    <LangItem>Español</LangItem>
+                    <LangItem>English (US)</LangItem>
+                    <LangItem>Português (Brasil)</LangItem>
+                    <LangItem>Français (France)</LangItem>
+                    <LangItem>Italiano</LangItem>
+                    <LangItem>Deutsch</LangItem>
+                    <LangItem>العربية</LangItem>
+                    <LangItem>中文(简体)</LangItem>
+                    <LangItem>हिन्दी</LangItem>
+                    <LangItem>日本語</LangItem>
+                    <PlusIcon size={15}>+</PlusIcon>
+                </Languajes>
+                <Line />
+                <Options>
+                    <OpItem>Registrarte</OpItem>
+                    <OpItem>Iniciar sesión</OpItem>
+                    <OpItem> Messenger</OpItem>
+                    <OpItem>Facebook Lite</OpItem>
+                    <OpItem>Watch</OpItem>
+                    <OpItem>Lugares</OpItem>
+                    <OpItem>Juegos</OpItem>
+                    <OpItem>Marketplace</OpItem>
+                    <OpItem>Meta Pay</OpItem>
+                    <OpItem>Oculus</OpItem>
+                    <OpItem>Portal</OpItem>
+                    <OpItem>Instagram</OpItem>
+                    <OpItem>Bulletin</OpItem>
+                    <OpItem>Recaudación de fondos</OpItem>
+                    <OpItem>Servicios</OpItem>
+                    <OpItem>Centro de información de votación</OpItem>
+                    <OpItem>Política de privacidad</OpItem>
+                    <OpItem>Centro de privacidad</OpItem>
+                    <OpItem>Grupos</OpItem>
+                    <OpItem>Información</OpItem>
+                    <OpItem>Crear anuncio</OpItem>
+                    <OpItem>Crear página</OpItem>
+                    <OpItem>Desarrolladores</OpItem>
+                    <OpItem>Empleo</OpItem>
+                    <OpItem>Cookies</OpItem>
+                    <OpItem>Opciones de anuncios</OpItem>
+                    <OpItem>Condiciones</OpItem>
+                    <OpItem>Ayuda</OpItem>
+                    <OpItem>Subir contactos y no usuarios</OpItem>
+                </Options>
+                <Meta><b>Ednesor</b> © 2023</Meta>
+            </SubContainer>
         </Container>
     )
 }
