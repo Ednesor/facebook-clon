@@ -53,8 +53,7 @@ const Add = styled(BsFillPlusCircleFill)({
     marginTop: "16px",
 })
 const Accounts = styled("div")({
-    // display: "flex",
-    // justifyContent: "center"
+    userSelect: "none"
 })
 
 
