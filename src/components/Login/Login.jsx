@@ -10,6 +10,10 @@ const Container = styled("div")({
     justifyContent: "center",
     flexWrap: "wrap",
     marginTop: "80px",
+    '@media(max-width: 1000px)': {
+        width: "100%",
+        marginTop: "0px",
+    }
 });
 const SubContainer = styled("div")({
     display: "flex",
@@ -20,6 +24,16 @@ const SubContainer = styled("div")({
     flexWrap: "wrap",
     marginLeft: "-20px",
     height: "650px",
+    '@media(max-width: 1200px)': {
+        width: "80%",
+    },
+    '@media(max-width: 1000px)': {
+        width: "100%",
+        height: "auto",
+        marginLeft: "0px",
+        justifyContent: "center",
+        marginBottom: "150px"
+    },
 });
 
 export default function Login() {
@@ -29,7 +43,7 @@ export default function Login() {
                 <Sesion />
                 <LoginForm />
             </SubContainer>
-                <Footer />
+            <Footer />
         </Container>
     )
 };

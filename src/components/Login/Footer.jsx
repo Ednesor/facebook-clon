@@ -26,6 +26,10 @@ const Languajes = styled("div")({
     flexWrap: "wrap",
     marginTop: "25px",
     marginBottom: "3px",
+    '@media(max-width: 1000px)': {
+        width: "90%",
+        justifyContent: "center"
+    }
 })
 const LangItem = styled("span")({
     color: "#888989",
@@ -54,7 +58,11 @@ const Line = styled("hr")({
     width: "71.5%",
     height: "0px",
     border: "0px solid white",
-    borderTop: "1px solid #C9C7C9"
+    borderTop: "1px solid #C9C7C9",
+    '@media(max-width: 1000px)': {
+        width: "90%",
+        marginBottom: "15px"
+    }
 })
 const Options = styled("div")({
     width: "71.5%",
@@ -62,6 +70,10 @@ const Options = styled("div")({
     justifyContent: "left",
     alignItems: "end",
     flexWrap: "wrap",
+    '@media(max-width: 1000px)': {
+        width: "90%",
+        justifyContent: "center"
+    }
 })
 const OpItem = styled(LangItem)({
     marginRight: "20px",
@@ -76,6 +88,9 @@ const Meta = styled("p")({
     marginBottom: "20px",
     marginLeft: "-10px",
     marginTop: "20px",
+    '@media(max-width: 1000px)': {
+        textAlign: "center"
+    }
 })
 
 export default function Footer() {
