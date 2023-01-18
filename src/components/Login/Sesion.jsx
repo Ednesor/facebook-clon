@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components"
 import { BsFillPlusCircleFill } from "react-icons/bs"
+import { useNavigate } from "react-router-dom";
 
 const Logo = styled("img")({
     width: "200px",
@@ -95,6 +96,12 @@ const SubCont2 = styled("div")({
 
 
 export default function Sesion() {
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        return navigate("/home");
+    }
+
     return (
         <Container>
             <SubCont2>
@@ -104,19 +111,10 @@ export default function Sesion() {
                     <SubTitle>Haz clic en tu foto o agrega una cuenta</SubTitle>
                 </SubContainer>
                 <Accounts>
-                    <AddAccount>
+                    <AddAccount onClick={handleClick}>
                         <Add size={42} />
                         <Name>Agregar cuenta</Name>
-                    </AddAccount>
-                    <AddAccount>
-                        <Add size={42} />
-                        <Name>Agregar cuenta</Name>
-                    </AddAccount>
-                    <AddAccount>
-                        <Add size={42} />
-                        <Name>Agregar cuenta</Name>
-                    </AddAccount>
-                    
+                    </AddAccount>      
                 </Accounts>
             </SubCont2>
         </Container>

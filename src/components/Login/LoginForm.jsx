@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled("div")({
@@ -95,12 +96,30 @@ const SelectText = styled("span")({
 })
 
 export default function LoginForm() {
+    const [mail, setMail] = useState("");
+    const [pass, setPass] = useState("");
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        console.log(e.target.getAttribute("name"));
+        e.target.getAttribute("name") === "email" ?
+            setMail(e.target.value) :
+            setPass(e.target.value);
+    }
+    const handleLogin = () => {
+        let email = false;
+        let password = false;
+        if (mail !== "" && mail.includes("@")) email = true;
+        if (pass !== "" && pass.length >= 8) password = true;
+        if (email && password) return navigate("/home");
+    }
+
     return (
         <Container>
             <Form>
-                <Field type="text" name="email" id="email" placeholder="Correo electrónico o número de teléfono" />
-                <Field type="password" name="password" id="password" placeholder="Contraseña" />
-                <LoginButton>Iniciar sesión</LoginButton>
+                <Field type="text" name="email" id="email" placeholder="Correo electrónico o número de teléfono" value={mail} onChange={handleChange} />
+                <Field type="password" name="password" id="password" placeholder="Contraseña" value={pass} onChange={handleChange} />
+                <LoginButton onClick={handleLogin}>Iniciar sesión</LoginButton>
                 <Hint>¿Olvidaste tu contraseña?</Hint>
                 <Line />
                 <CreateButton>Crear cuenta nueva</CreateButton>

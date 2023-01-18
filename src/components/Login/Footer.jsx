@@ -147,4 +147,3 @@ export default function Footer() {
         </Container>
     )
 }
-//TODO: sustituir % por px
