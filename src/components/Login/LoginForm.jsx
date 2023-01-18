@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 const Container = styled("div")({
     width: "400px",
-    height: "335px"
+    height: "335px",
+    '@media(max-width: 1000px)': {
+        width: "350px"
+    }
 })
 const Form = styled("div")({
     backgroundColor: "white",
