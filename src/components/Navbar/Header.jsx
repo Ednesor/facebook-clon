@@ -9,7 +9,8 @@ const Container = styled("div")({
     marginLeft: "10px",
 })
 const Logo = styled("img")({
-    width: "40px"
+    width: "40px",
+    cursor: "pointer"
 })
 const Search = styled("input")({
     width: "225px",
