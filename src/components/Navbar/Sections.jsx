@@ -42,45 +42,59 @@ const GameOut = styled(IoGameControllerOutline)(styleIconsOut)
 
 const Container = styled("div")({
     height: "100%",
+    width: "580px",
     display: "flex",
     alignItems: "flex-end",
+    justifyContent: "space-between",
+    marginRight: "100px",
 })
 const Link = styled(NavLink)({
     height: "100%",
     display: "flex",
     alignItems: "flex-end",
+    position: "relative",
     width: "110px",
-    "&:hover::before": {
-        content: "algo",
+    "&::after": {
+        content: '""attr(id)""',
         backgroundColor: "#C8C8C8",
-        position: "fixed"
+        borderRadius: "5px",
+        color: "black",
+        fontSize: "13px",
+        position: "absolute",
+        height: "27px",
+        width: "90px",
+        textAlign: "center",
+        paddingTop: "7px",
+        top: "57px",
+        left: "70px",
+        marginLeft: "-60px",
     }
 })
 
 export default function Sections() {
     return (
         <Container>
-            <Link to="/">
+            <Link to="/" id="Inicio">
                 {({ isActive }) => (
                     isActive ? <HomeIcon size={30} /> : <HomeOut size={30} />
                 )}
             </Link>
-            <Link to="/friends">
+            <Link to="/friends" id="Amigos">
                 {({ isActive }) => (
                     isActive ? <FriendsIcon size={30} /> : <FriendsOut size={30} />
                 )}
             </Link>
-            <Link to="/watch">
+            <Link to="/watch" id="Watch">
                 {({ isActive }) => (
                     isActive ? <WatchIcon size={30} /> : <WatchOut size={30} />
                 )}
             </Link>
-            <Link to="/market">
+            <Link to="/market" id="Marketplace">
                 {({ isActive }) => (
                     isActive ? <MarketIcon size={30} /> : <MarketOut size={30} />
                 )}
             </Link>
-            <Link to="/game">
+            <Link to="/game" id="Videojuegos">
                 {({ isActive }) => (
                     isActive ? <GameIcon size={30} /> : <GameOut size={30} />
                 )}
