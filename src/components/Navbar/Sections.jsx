@@ -54,7 +54,7 @@ const Link = styled(NavLink)({
     alignItems: "flex-end",
     position: "relative",
     width: "110px",
-    "&::after": {
+    "&:hover::after": {
         content: '""attr(id)""',
         backgroundColor: "#C8C8C8",
         borderRadius: "5px",
