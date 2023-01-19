@@ -18,6 +18,7 @@ const styleIconsOut = {
     width: "100%",
     paddingTop: "5px",
     marginBottom: "4px",
+    transition: "background-color .15s",
     "&:hover": {
         backgroundColor: "#3A3B3C",
         borderRadius: "10px",
