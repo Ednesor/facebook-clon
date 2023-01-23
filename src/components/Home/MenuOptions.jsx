@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
+import { data } from "../../data/MenuOptions"
 import { FaUserAlt } from "react-icons/fa";
 import { FaUserFriends } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
 import { RiGamepadFill } from "react-icons/ri";
 import { BsFillMegaphoneFill } from "react-icons/bs";
 import { MdGroups } from "react-icons/md";
+import { BiChevronDown } from "react-icons/bi";
+import { BiChevronUp } from "react-icons/bi";
 
 const Container = styled("div")({
     backgroundColor: "transparent",
@@ -37,7 +41,7 @@ const Container = styled("div")({
 })
 const logoStyle = {
     borderRadius: "50px",
-    color: "#3086F3",
+    color: "#318EF5",
     marginBottom: "2px"
 }
 const SubContainer = styled("div")({
@@ -72,8 +76,30 @@ const NotiLogo = styled(MdOutlineWeb)(logoStyle)
 const GameLogo = styled(RiGamepadFill)(logoStyle)
 const AddsLogo = styled(BsFillMegaphoneFill)(logoStyle)
 const GroupLogo = styled(MdGroups)(logoStyle)
+const ShowMoreLogo = styled(BiChevronDown)({
+    ...logoStyle,
+    color: "white",
+    width: "36px",
+    backgroundColor: "#444546",
+    paddingTop: "5px",
+    paddingBottom: "5px",
+})
+const ShowLessLogo = styled(BiChevronUp)({
+    ...logoStyle,
+    color: "white",
+    width: "36px",
+    backgroundColor: "#444546",
+    paddingTop: "5px",
+    paddingBottom: "5px",
+})
 
 export default function MenuOptions() {
+    const [extraMenu, setExtraMenu] = useState(false);
+
+    const createLogo = (logo) => {
+        const Logo = styled(logo)(logoStyle)
+        return Logo;
+    }
     return (
         <Container>
             <SubContainer>
@@ -82,64 +108,36 @@ export default function MenuOptions() {
             </SubContainer>
             <SubContainer>
                 <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+                <Title>Amigos</Title>
             </SubContainer>
             <SubContainer>
                 <NotiLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+                <Title>Más recientes</Title>
             </SubContainer>
             <SubContainer>
                 <GameLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+                <Title>Jugar</Title>
             </SubContainer>
             <SubContainer>
                 <AddsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+                <Title>Centro de anuncios</Title>
             </SubContainer>
             <SubContainer>
                 <GroupLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+                <Title>Grupos</Title>
             </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
+            {extraMenu ?
+                <>
+                    <SubContainer>
+                        {createLogo(data[0].icon)}
+                        <Title>{data[0].title}</Title>
+                    </SubContainer>
+                </> : null}
+            <SubContainer onClick={() => extraMenu ? setExtraMenu(false) : setExtraMenu(true)}>
+                {!extraMenu ? <ShowMoreLogo size={25} /> : <ShowLessLogo size={25} />}
+                {!extraMenu ? <Title>Ver más</Title> : <Title>Ver menos</Title>}
             </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
-            <SubContainer>
-                <FriendsLogo size={36} />
-                <Title>Edgardo Ibar Funes Ortiz</Title>
-            </SubContainer>
+
         </Container>
     )
 }
