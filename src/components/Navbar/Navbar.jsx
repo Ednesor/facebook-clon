@@ -7,15 +7,13 @@ import Sections from "./Sections";
 const Container = styled("div")({
     backgroundColor: "#242526",
     height: "55px",
-    borderBottom: "1px solid #696869",
+    borderBottom: "1px solid #404040",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     position: "fixed",
     width: "100%",
 })
-
-
 
 export default function Navbar() {
     return (
