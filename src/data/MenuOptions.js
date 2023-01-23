@@ -1,11 +1,13 @@
-import { FaImage } from "react-icons";
+import { FaImage } from "react-icons/fa";
 
-const data = [
+export const data = [
     {
         icon: FaImage,
-        title: ""
+        title: "Actividad publicitaria reciente"
+    },
+    {
+        icon: FaImage,
+        title: "Actividad publicitaria reciente"
     },
 
 ];
-
-exports = data;
