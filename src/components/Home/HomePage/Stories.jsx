@@ -24,6 +24,9 @@ const Option = styled("div")({
     justifyContent: "center",
     alignItems: "center",
     borderBottom: "3px solid #2E89FF",
+    "&:hover": {
+        
+    }
 })
 const OpTitle = styled("span")({
     color: "#2E89FF",
@@ -42,21 +45,21 @@ const ContentContainer = styled("div")({
 })
 
 export default function Stories() {
-    const [storie, setStorie] = useState(true);
+    const [story, setStory] = useState(true);
     return (
         <Container>
             <OptionContainer>
-                <Option>
+                <Option style={story ? {} : {border: "none"}}>
                     <StoriesLogo size={25} />
                     <OpTitle>Historias</OpTitle>
                 </Option>
-                <Option>
+                <Option style={story ? {border: "none"} : {}}>
                     <ReelsLogo size={25} />
                     <OpTitle>Reels</OpTitle>
-                    <p as={OpTitle}>Hola</p>
                 </Option>
             </OptionContainer>
             <ContentContainer>
+                    <p style={{}}>Hola</p>
 
             </ContentContainer>
         </Container>

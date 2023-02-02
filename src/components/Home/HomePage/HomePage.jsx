@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Stories from "./Stories";
 
 const Container = styled("div")({
-    width: "500px",
+    width: "580px",
     marginTop: "25px"
 })
 
