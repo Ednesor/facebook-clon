@@ -134,6 +134,13 @@ const Separator = styled("span")({
     backgroundColor: "#B0B3B8",
     marginRight: "5px",
 })
+const Image = styled("i")({
+    width: "36px",
+    height: "36px",
+    backgroundRepeat: "no-repeat",
+    display: "inline-block",
+    background: "url(https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/BHDNlEdwMgn.png)"
+});
 
 export default function MenuOptions() {
     const [extraMenu, setExtraMenu] = useState(false);
@@ -144,7 +151,7 @@ export default function MenuOptions() {
         for (let i = 0; i < rep; i++) {
             array.push(
                 <SubContainer key={i}>
-                    {!AD ? <ExtraLogo size={36}/> : <ADLogo size={36} />}
+                    {!AD ? <ExtraLogo size={36} /> : <ADLogo size={36} />}
                     {!AD ? <Title>Opción extra</Title> : <Title>Acceso directo</Title>}
                 </SubContainer>
             )
@@ -159,26 +166,52 @@ export default function MenuOptions() {
                 <Title>Edgardo Ibar Funes Ortiz</Title>
             </SubContainer>
             <SubContainer>
-                <FriendsLogo size={36} />
+                {/* <FriendsLogo size={36} /> */}
+                <Image style={{ backgroundPosition: "0 -296px" }} />
                 <Title>Amigos</Title>
             </SubContainer>
             <SubContainer>
-                <NotiLogo size={36} />
+                <img alt="recientes" src="https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png" />
                 <Title>Más recientes</Title>
             </SubContainer>
             <SubContainer>
-                <GameLogo size={36} />
-                <Title>Jugar</Title>
-            </SubContainer>
-            <SubContainer>
-                <AddsLogo size={36} />
-                <Title>Centro de anuncios</Title>
-            </SubContainer>
-            <SubContainer>
-                <GroupLogo size={36} />
+                <Image style={{ backgroundPosition: "0 -74px" }} />
                 <Title>Grupos</Title>
             </SubContainer>
-            {extraMenu ? createSection(19, false) : null}
+            <SubContainer>
+                <Image style={{ backgroundPosition: "0 -407px" }} />
+                <Title>Marketplace</Title>
+            </SubContainer>
+            <SubContainer>
+                <Image style={{ backgroundPosition: "0 -518px" }} />
+                <Title>Watch</Title>
+            </SubContainer>
+            {extraMenu ? <>
+                <SubContainer>
+                    <img style={{width: "36px"}} src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/cbPxeioybsd.png" alt="publicidad" />
+                    <Title>Actividad publicitaria reciente</Title>
+                </SubContainer>
+                <SubContainer>
+                    <img style={{width: "36px"}} src="https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/C949oxkze-S.png" alt="anuncios" />
+                    <Title>Administrador de anuncios</Title>
+                </SubContainer>
+                <SubContainer>
+                    <img style={{width: "36px"}} src="https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/4LP02rGQaMl.png" alt="clima" />
+                    <Title>Clima: Centro de información</Title>
+                </SubContainer>
+                <SubContainer>
+                    <img style={{width: "36px"}} src="https://static.xx.fbcdn.net/rsrc.php/v3/yW/r/nbUcQfHcgBv.png" alt="favoritos" />
+                    <Title>Favoritos</Title>
+                </SubContainer>
+                <SubContainer>
+                    <Image style={{ backgroundPosition: "0px -185px" }} />
+                    <Title>Guardado</Title>
+                </SubContainer>
+                <SubContainer>
+                    <Image style={{ backgroundPosition: "0px -111px" }} />
+                    <Title>Páginas</Title>
+                </SubContainer>
+            </> : null}
             <SubContainer onClick={() => extraMenu ? setExtraMenu(false) : setExtraMenu(true)}>
                 {!extraMenu ? <ShowMoreLogo size={25} /> : <ShowLessLogo size={25} />}
                 {!extraMenu ? <Title>Ver más</Title> : <Title>Ver menos</Title>}
